@@ -1,4 +1,3 @@
-
 #Necesita para correr en Google Cloud
 # 128 GB de memoria RAM
 # 256 GB de espacio en el disco local
@@ -20,9 +19,9 @@ require("mlrMBO")
 
 #Parametros del script
 PARAM  <- list()
-PARAM$experimento <- "CA9060_OB"
+PARAM$experimento <- "HT9410"
 
-PARAM$exp_input  <- "CA9060_DF_TRAIN"
+PARAM$exp_input  <- "TS9310"
 # FIN Parametros del script
 
 
@@ -34,7 +33,7 @@ options(error = function() {
 })
 #------------------------------------------------------------------------------
 
-ksemilla  <- 975433
+ksemilla  <- 102191
 
 kcrossvalidation_folds  <- 5  #En caso que se haga cross validation, se usa esta cantidad de folds
 
