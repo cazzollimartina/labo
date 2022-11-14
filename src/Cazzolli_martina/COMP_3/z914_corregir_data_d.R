@@ -218,11 +218,7 @@ campos_monetarios  <- campos_monetarios[campos_monetarios %like% "^(m|Visa_m|Mas
 #hay que probar experimentalmente cual funciona mejor
 switch( 
   PARAM$metodo,
-  "ninguno"        = cat( "No hay correccion del data drifting" ),
-  "rank_simple"    = drift_rank_simple( campos_monetarios ),
-  "rank_cero_fijo" = drift_rank_cero_fijo( campos_monetarios ),
-  "deflacion"      = drift_deflacion( campos_monetarios ) 
-)
+  "rank_cero_fijo" = drift_rank_cero_fijo( campos_monetarios ))
 
 
 
