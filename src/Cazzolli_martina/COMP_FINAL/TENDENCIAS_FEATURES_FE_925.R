@@ -1,11 +1,11 @@
-+#Necesita para correr en Google Cloud
-  # 256 GB de memoria RAM
-  # 256 GB de espacio en el disco local
-  #   8 vCPU
+#Necesita para correr en Google Cloud
+# 256 GB de memoria RAM
+# 256 GB de espacio en el disco local
+#   8 vCPU
   
   
-  #limpio la memoria
-  rm( list=ls() )  #remove all objects
+#limpio la memoria
+rm( list=ls() )  #remove all objects
 gc()             #garbage collection
 
 require("data.table")
@@ -24,10 +24,10 @@ PARAM$experimento <- "COMP_FINAL_FE9250"
 PARAM$exp_input  <- "COMP_FINAL_DR9141"
 
 PARAM$lag1  <- TRUE
-PARAM$lag2  <- FALSE
+PARAM$lag2  <- TRUE
 PARAM$Tendencias  <- TRUE
-PARAM$RandomForest  <- FALSE          #No se puede poner en TRUE para la entrega oficial de la Tercera Competencia
-PARAM$CanaritosAsesinos  <- FALSE
+PARAM$RandomForest  <- TRUE          #No se puede poner en TRUE para la entrega oficial de la Tercera Competencia
+PARAM$CanaritosAsesinos  <- TRUE
 # FIN Parametros del script
 
 #------------------------------------------------------------------------------
@@ -119,7 +119,7 @@ cppFunction('NumericVector fhistC(NumericVector pcolumna, IntegerVector pdesde )
 #la tendencia es la pendiente de la recta que ajusta por cuadrados minimos
 #La funcionalidad de ratioavg es autoria de  Daiana Sparta,  UAustral  2021
 
-TendenciaYmuchomas  <- function( dataset, cols, ventana=6, tendencia=TRUE, minimo=TRUE, maximo=TRUE, promedio=TRUE, 
+TendenciaYmuchomas  <- function( dataset, cols, ventana=12, tendencia=TRUE, minimo=TRUE, maximo=TRUE, promedio=TRUE, 
                                  ratioavg=FALSE, ratiomax=FALSE)
 {
   gc()
@@ -372,7 +372,7 @@ if( PARAM$Tendencias )
 {
   TendenciaYmuchomas( dataset, 
                       cols= cols_lagueables,
-                      ventana=   6,      # 6 meses de historia
+                      ventana=   12,      # 6 meses de historia
                       tendencia= TRUE,
                       minimo=    TRUE,
                       maximo=    TRUE,
