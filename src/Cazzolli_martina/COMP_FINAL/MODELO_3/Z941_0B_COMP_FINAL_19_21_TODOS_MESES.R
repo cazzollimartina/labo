@@ -3,6 +3,8 @@
 # 256 GB de espacio en el disco local
 #   8 vCPU
 
+##
+
 #limpio la memoria
 rm( list=ls() )  #remove all objects
 gc()             #garbage collection
