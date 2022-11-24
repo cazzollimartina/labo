@@ -1,0 +1,13 @@
+﻿Competencia final:
+La entrega elegida, posee los siguientes modelos:
+Modelo 1:
+* Los algoritmos deben ser corridos según el orden de la cátedra.
+* Las semillas en el código z991, fueron cambiadas manualmente. 
+* Debido a tiempo y falta de conocimiento, se ha juntado cada una de las semillas manualmente en otro programa. 
+Modelo 2:
+* Los algoritmos deben ser corridos según el orden de la cátedra.
+* Las semillas en el código z991, fueron cambiadas manualmente. 
+* Debido a tiempo y falta de conocimiento, se ha juntado cada una de las semillas manualmente en otro programa. 
+
+
+Modelo 3 y 4 no han sido usados en la entrega elegida de kaggle
